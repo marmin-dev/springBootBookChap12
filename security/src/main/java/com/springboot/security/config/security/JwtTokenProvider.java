@@ -1,6 +1,5 @@
-package com.springboot.security;
+package com.springboot.security.config.security;
 
-import com.springboot.security.service.UserDetailsService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
@@ -12,6 +11,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
@@ -51,6 +51,7 @@ public class JwtTokenProvider {
                 .setExpiration(new Date(now.getTime() + tokenValidMillisecond))
                 .signWith(SignatureAlgorithm.HS256,secretKey)
                 .compact();
+
         logger.info("[Create Token] 토큰 생성 왼료");
         return token;
     }

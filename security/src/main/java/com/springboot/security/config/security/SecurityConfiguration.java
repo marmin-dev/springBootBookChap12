@@ -1,7 +1,5 @@
 package com.springboot.security.config.security;
 
-import com.springboot.security.JwtAuthenticationFilter;
-import com.springboot.security.JwtTokenProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -50,6 +48,6 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     public void configure(WebSecurity web) throws Exception {
         web.ignoring().antMatchers("/v2/api-docs","/swagger-resources/**," +
-                "**/swagger-ui/html","/webjars/**","/swagger/**","/sign-api/exception");
+                "/swagger-ui/html","/webjars/**","/swagger/**","/sign-api/exception");
     }
 }

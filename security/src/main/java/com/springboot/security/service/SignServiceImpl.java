@@ -1,6 +1,6 @@
 package com.springboot.security.service;
 
-import com.springboot.security.JwtTokenProvider;
+import com.springboot.security.config.security.JwtTokenProvider;
 import com.springboot.security.common.CommonResponse;
 import com.springboot.security.data.dto.SignInResultDto;
 import com.springboot.security.data.dto.SignUpResultDto;

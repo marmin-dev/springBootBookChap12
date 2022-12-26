@@ -1,4 +1,4 @@
-package com.springboot.security;
+package com.springboot.security.config.security;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -35,4 +35,5 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         }
         filterChain.doFilter(request,response);
     }
+
 }
