@@ -32,6 +32,9 @@ public class User implements UserDetails {
     @Column(nullable = false)
     private String password;
 
+    @Column(nullable = false)
+    private String name;
+
     @ElementCollection(fetch = FetchType.EAGER)
     @Builder.Default
     private List<String> roles = new ArrayList<>();
@@ -48,7 +51,7 @@ public class User implements UserDetails {
     //계정의 비밀번호를 리턴한다
     @Override
     public String getUsername() {
-        return this.uid;
+        return this.name;
     }
     //계정으 이름을 리턴.일반적으로 아이디를 리턴한다
     @Override

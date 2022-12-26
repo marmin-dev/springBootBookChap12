@@ -31,4 +31,9 @@ public class CustomAuthenticationEntryPoint implements AuthenticationEntryPoint 
         response.setCharacterEncoding("utf-8");
         response.getWriter().write(objectMapper.writeValueAsString(entryPointErrorResponse));
     }
+//    @Override
+//    public void commence(HttpServletRequest request, HttpServletResponse response,
+//                         AuthenticationException authException) throws IOException, ServletException {
+//        response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
+//    }
 }
