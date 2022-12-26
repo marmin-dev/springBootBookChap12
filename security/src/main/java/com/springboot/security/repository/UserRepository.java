@@ -1,6 +1,6 @@
 package com.springboot.security.repository;
 
-import com.springboot.security.entity.User;
+import com.springboot.security.data.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface UserRepository extends JpaRepository<User,Long> {

@@ -1,4 +1,4 @@
-package com.springboot.security.entity;
+package com.springboot.security.data.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
